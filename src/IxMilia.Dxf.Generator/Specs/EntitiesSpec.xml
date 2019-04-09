@@ -6,7 +6,7 @@
     ENTITY - the abstract base of all of the following types
 
     -->
-    <Entity Name="DxfEntity" EntityType="" SubclassMarker="" TypeString="">
+    <Entity Name="DxfEntity" EntityType="" SubclassMarker="" TypeString="" HasXData="true">
         <Property Name="IsInPaperSpace" Code="67" Type="bool" DefaultValue="false" ReadConverter="BoolShort" WriteConverter="BoolShort" DisableWritingDefault="true" MinVersion="R12" />
         <Property Name="Layer" Code="8" Type="string" DefaultValue="0" WriteConverter="DefaultIfNullOrEmpty(&quot;0&quot;)" />
         <Property Name="LineTypeName" Code="6" Type="string" DefaultValue="BYLAYER" DisableWritingDefault="true" />
@@ -339,7 +339,7 @@
     CIRCLE
 
     -->
-    <Entity Name="DxfCircle" EntityType="Circle" SubclassMarker="AcDbCircle" TypeString="CIRCLE">
+    <Entity Name="DxfCircle" EntityType="Circle" SubclassMarker="AcDbCircle" TypeString="CIRCLE" HasXData="true">
         <Property Name="Thickness" Code="39" Type="double" DefaultValue="0.0" DisableWritingDefault="true" />
         <Property Name="Center" Code="10" Type="DxfPoint" DefaultValue="DxfPoint.Origin" CodeOverrides="10,20,30" />
         <Property Name="Radius" Code="40" Type="double" DefaultValue="0.0" />
@@ -476,7 +476,7 @@
     ELLIPSE
 
     -->
-    <Entity Name="DxfEllipse" EntityType="Ellipse" SubclassMarker="AcDbEllipse" TypeString="ELLIPSE" MinVersion="R13">
+    <Entity Name="DxfEllipse" EntityType="Ellipse" SubclassMarker="AcDbEllipse" TypeString="ELLIPSE" MinVersion="R13" HasXData="true">
         <Property Name="Center" Code="10" Type="DxfPoint" DefaultValue="DxfPoint.Origin" CodeOverrides="10,20,30" />
         <Property Name="MajorAxis" Code="11" Type="DxfVector" DefaultValue="DxfVector.XAxis" CodeOverrides="11,21,31" />
         <Property Name="Normal" Code="210" Type="DxfVector" DefaultValue="DxfVector.ZAxis" DisableWritingDefault="true" CodeOverrides="210,220,230" />
@@ -678,7 +678,7 @@
     LINE
 
     -->
-    <Entity Name="DxfLine" EntityType="Line" SubclassMarker="AcDbLine" TypeString="LINE,3DLINE">
+    <Entity Name="DxfLine" EntityType="Line" SubclassMarker="AcDbLine" TypeString="LINE,3DLINE" HasXData="true">
         <Property Name="Thickness" Code="39" Type="double" DefaultValue="0.0" DisableWritingDefault="true" />
         <Property Name="P1" Code="10" Type="DxfPoint" DefaultValue="DxfPoint.Origin" CodeOverrides="10,20,30" />
         <Property Name="P2" Code="11" Type="DxfPoint" DefaultValue="DxfPoint.Origin" CodeOverrides="11,21,31" />
@@ -926,7 +926,7 @@
     POINT
 
     -->
-    <Entity Name="DxfModelPoint" EntityType="Point" SubclassMarker="AcDbPoint" TypeString="POINT">
+    <Entity Name="DxfModelPoint" EntityType="Point" SubclassMarker="AcDbPoint" TypeString="POINT" HasXData="true">
         <Property Name="Location" Code="10" Type="DxfPoint" DefaultValue="DxfPoint.Origin" CodeOverrides="10,20,30" />
         <Property Name="Thickness" Code="39" Type="double" DefaultValue="0.0" DisableWritingDefault="true" />
         <Property Name="ExtrusionDirection" Code="210" Type="DxfVector" DefaultValue="DxfVector.ZAxis" DisableWritingDefault="true" CodeOverrides="210,220,230" />
